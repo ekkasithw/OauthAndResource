@@ -1,2 +1,2 @@
-# oauth2
-Oauth 2.0 and resource server
+# scrum-tools
+Tools of scrum team people, by scrum team people, for scrum team people.
