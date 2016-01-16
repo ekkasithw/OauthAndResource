@@ -70,7 +70,7 @@ module.exports.connections = {
     port: 27017,
     user: 'admin',
     password: '',
-    database: 'tripplaner'
+    database: 'resource'
   },
 
   /***************************************************************************

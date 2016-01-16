@@ -17,9 +17,6 @@ module.exports.oauth = {
     // Example
     //
     // 'Administer product backlogs'
-
-    'Manage Trip'
-
   ],
 
   actionScopes: {
@@ -36,8 +33,6 @@ module.exports.oauth = {
     //   'update': ['Administer product backlogs'],
     //   'destroy': ['Administer product backlogs']
     // }
-
-    '*': ['Manage Trip']
   }
 
 };
