@@ -1,2 +1,2 @@
 # Oauth 2.0
-And Resource server
+And Resource server for trip planer
