@@ -1,0 +1,106 @@
+
+
+
+
+/* -----------------------------------------------------------------------------
+ |
+ |	Font-face
+ |
+*/
+
+@font-face {
+  font-family: 'Chalk';
+  src: url('../fonts/KGBrokenVesselsSketch.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/KGBrokenVesselsSketch.woff') format('woff'),
+       url('../fonts/KGBrokenVesselsSketch.ttf')  format('truetype'),
+       url('../fonts/KGBrokenVesselsSketch.svg#KGBrokenVesselsSketch') format('svg');
+}
+
+.chalk {
+	font-family: 'Chalk';
+	color: white;
+}
+
+.red-chalk {
+	font-family: 'Chalk';
+	color: red;
+}
+
+/* -----------------------------------------------------------------------------
+ |
+ |	Common
+ |
+*/
+
+body {
+	background: url(../images/blackboard.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.btn-glass,
+.btn-glass:active,
+.btn-glass:focus,
+.btn-glass:active:focus,
+.btn-glass:hover {
+	background: none;
+	border: none;
+  text-shadow: none;
+}
+
+.link-hover-black-no-eff:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+.height-250px {
+	height: 250px;
+}
+
+.height-500px {
+	height: 500px;
+}
+
+.line-height-34px {
+	line-height: 34px;
+}
+
+.mg-t-1em {
+	margin-top: 1em;
+}
+
+.mg-b-1em {
+	margin-bottom: 1em;
+}
+
+.mg-b-3em {
+	margin-bottom: 3em;
+}
+
+.text-big {
+  font-size: 24px;
+}
+
+/* -----------------------------------------------------------------------------
+ |
+ |	Specific
+ |
+*/
+
+.preview-image {
+	border-top: 10px solid white;
+	border-right: 10px solid white;
+	border-bottom: 50px solid white;
+	border-left: 10px solid white;
+	margin-bottom: 2em;
+	box-shadow: 0 0 20px black;
+	min-width: 100%;
+}
