@@ -3,11 +3,13 @@
 
 
 module.exports = function(req, res, next) {
-  AccessToken.findOne({token: req.param('accessToken')})
+  var token = req.headers.authorization.split(' ')[1];
+
+  AccessToken.findOne({token: token})
     .then(function(thisAccessToken) {
       if (! thisAccessToken) return res.forbidden('Invalid access token');
 
-      if (thisAccessToken.isExpired()) return res.notFound('Access token expired');
+      if (thisAccessToken.isExpired()) return res.forbidden('Access token expired');
 
       req.accessToken = thisAccessToken;
 

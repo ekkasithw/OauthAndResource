@@ -33,7 +33,7 @@ module.exports = function(req, res, next) {
           AccessToken.findOne(find)
             .then(function(thisAccessToken) {
               if (! thisAccessToken) return AccessToken.generate(req.client.id, req.user.id);
-              return AccessToken.refresh(req.client.id, req.user.id);
+              return thisAccessToken.refresh(req.client.id, req.user.id);
             })
             .then(function(thisAccessToken) {
               var destination = url.makeClientRedirect(redirectUrl, thisAccessToken.token, responseType);

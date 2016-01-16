@@ -32,6 +32,12 @@
  |
 */
 
+html, body, .container-fluid {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
 	background: url(../images/blackboard.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -41,9 +47,13 @@ body {
 }
 
 .vcenter {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  margin-left: -25%;
+  margin-top: -30%;
 }
 
 .btn-glass,

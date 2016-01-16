@@ -36,29 +36,21 @@
 
   <body>
     <div class="container-fluid chalk">
-      <div class="row vcenter">
-        <div class="col-sm-12 col-md-12">
-          <% var error = req.flash('error') %>
-          <% if (error.length > 0) { %>
-            <div class="row mg-t-1em">
-              <div class="col-sm-2 col-md-4"></div>
-              <div class="col-sm-8 col-md-4">
-                <div class="alert alert-danger alert-dismissible" role="alert">
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <ul>
-                    <% error.forEach(function(err, index) { %>
-                    <li><%= err %></li>
-                    <% }) %>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-2 col-md-4"></div>
-            </div>
-          <% } %>
-          <%- body %>
-        </div>
+      <div class="vcenter">
+        <% var error = req.flash('error') %>
+        <% if (error.length > 0) { %>
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <ul>
+              <% error.forEach(function(err, index) { %>
+              <li><%= err %></li>
+              <% }) %>
+            </ul>
+          </div>
+        <% } %>
+        <%- body %>
       </div>
     </div>
 

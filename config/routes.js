@@ -43,6 +43,13 @@ module.exports.routes = {
 
   'post /token': 'authentications/AuthController.postToken',
 
+  'get /implicit': {
+    view: 'implicit',
+    locals: {
+      layout: false
+    }
+  },
+
   'get /me': 'authentications/AuthController.getMe',
 
   // -------------------------------------------------------------------------

@@ -12,7 +12,7 @@ module.exports = {
       case 'code':
         return redirectUrl + '?authCode=' + code;
       case 'token':
-        return redirectUrl + '#authCode=' + code;
+        return 'http://localhost:1338/implicit#accessToken=' + code;
     }
   }
 };

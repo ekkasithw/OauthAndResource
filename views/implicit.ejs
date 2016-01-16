@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    (function() {
+      var accessToken = location.hash.split('=')[1];
+      window.opener.postMessage(accessToken, '*');
+      window.close();
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
