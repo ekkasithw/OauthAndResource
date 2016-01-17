@@ -3,6 +3,8 @@
 
 
 module.exports = function(req, res, next) {
+  if (!req.headers.authorization) return res.forbidden('Invalid access token');
+
   var token = req.headers.authorization.split(' ')[1];
 
   AccessToken.findOne({token: token})

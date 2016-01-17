@@ -49,7 +49,7 @@
 ****************************************************************************/
 
 // module.exports.csrf = false;
-  module.exports.csrf = true;
+  module.exports.csrf = false;
 
 /****************************************************************************
 *                                                                           *
@@ -59,8 +59,8 @@
 *                                                                           *
 ****************************************************************************/
 
-  module.exports.csrf = {
-    grantTokenViaAjax: false,
-    origin: '',
-    routesDisabled: '/token'
-  };
+  //module.exports.csrf = {
+  //  grantTokenViaAjax: false,
+  //  origin: '',
+  //  routesDisabled: '/token,/town,/day-place,/day,/place'
+  //};

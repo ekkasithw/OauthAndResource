@@ -15,6 +15,10 @@ module.exports = {
     places: {
       collection: 'Place',
       via: 'town'
+    },
+    dayPlaces: {
+      collection: 'DayPlace',
+      via: 'town'
     }
   }
 };

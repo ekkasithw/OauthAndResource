@@ -7,7 +7,7 @@ module.exports.oauth = {
   responseTypes: ['code', 'token'],
   grantTypes: ['authorizationCode', 'refreshToken'],
   authCodeLife: 10, // minutes
-  accessTokenLife: 10, // minutes
+  accessTokenLife: 60 * 3, // minutes
   refreshTokenLife: 60 * 12, // minutes
 
   scopes: [

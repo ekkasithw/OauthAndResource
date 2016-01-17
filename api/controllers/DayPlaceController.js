@@ -8,16 +8,15 @@
 module.exports = {
 
   updatePlacesOrder: function (req, res) {
-    DayPlace.destroy({day: req.param('parentId'), place: req.param('item')})
+    DayPlace.destroy({day: req.param('dayId'), town: req.param('townId')})
     .then(function(dayPlaces) {
       var newDayPlaces = [];
 
-      sails.log(req.param('item'));
-
       req.param('item').forEach(function(placeId, index) {
         newDayPlaces.push({
-          day: req.param('parentId'),
+          day: req.param('dayId'),
           place: placeId,
+          town: req.param('townId'),
           weight: index
         });
       });
@@ -33,17 +32,17 @@ module.exports = {
   },
 
   getPlacesOfDayByTown: function (req, res) {
-    Place.find({town: req.param('townId')})
-    .then(function(places) {
-      var placeIds = [];
-      places.forEach(function(place) {
-        placeIds.push(place.id);
-      });
+    var filter = {
+      day: req.param('dayId'),
+      town: req.param('townId'),
+    };
 
-      return DayPlace.find({day: req.param('dayId'), place: placeIds}).populate('place');
-    })
+    DayPlace.find(filter).sort('weight ASC').populate('place')
     .then(function(dayPlaces) {
       var places = [];
+
+      sails.log(dayPlaces);
+
       dayPlaces.forEach(function(dayPlace) {
         places.push(dayPlace.place);
       });

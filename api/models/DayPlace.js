@@ -14,6 +14,9 @@ module.exports = {
     place: {
       model: 'Place'
     },
+    town: {
+      model: 'Town'
+    },
   }
 };
 
