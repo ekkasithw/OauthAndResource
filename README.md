@@ -1,2 +1,1 @@
-# Oauth 2.0
-And Resource server
+# Oauth 2.0 and a resource server
