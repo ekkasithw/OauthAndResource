@@ -22,5 +22,6 @@ module.exports = {
   // }
 
   hookTimeout: 60000,
+  port: 1338,
 
 };
